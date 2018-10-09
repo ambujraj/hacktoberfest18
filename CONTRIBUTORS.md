@@ -960,3 +960,9 @@ Place: Salvador, Brazil<br/>
 About: Computer Engineer<br/>
 Programming Language: C#, Python<br/>
 Email: leeosena21@gmail.com<br/>
+
+Name: [JanuriDP](https://github.com/JanuriDP)<br/>
+Place: Jakarta, Indonesia<br/>
+About: Web Developer<br/>
+Programming Language: PHP<br/>
+Email: hello@januridp.com<br/>
