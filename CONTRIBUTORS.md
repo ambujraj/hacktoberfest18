@@ -1,3 +1,8 @@
+Name: [Andresito de Guzman](https://github.com/andresitodeguzman)<br>
+Place: Philippines<br>
+About: Biology Student. Loves well engineered software<br>
+Programming Language: PHP, Python, JavaScript/Node, Ruby, Java<br>
+Email: andresitomyemail@gmail.com
 
 Name: [Bardr](https://github.com/Bardr)<br/>
 Place: Poland<br/>
