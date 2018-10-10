@@ -1,4 +1,9 @@
 
+Name: [AdrianHL](https://github.com/AdrianHL)<br/>
+Place: United Kingdom<br/>
+About: Lead Web Developer focused on Laravel projects.<br/>
+Programming Language: PHP, Java, HTML, JS...<br/>
+
 Name: [Bardr](https://github.com/Bardr)<br/>
 Place: Poland<br/>
 About: Student and software developer! Likes AI, anime and good beer.<br/>
