@@ -1,3 +1,10 @@
+Name: [Andrew](https://github.com/redside100)<br/>
+Place: Waterloo, Canada<br/>
+About: Computer Engineering Student @ uWaterloo<br/>
+Programming languages: Java, Javascript, Python, C++, Visual Basic <br/>
+Email: andrewpeng00@gmail.com
+
+
 Name: [Sarah](https://github.com/sarahxoxo)<br/>
 Place: Taiwan<br/>
 About: software engineering developer!<br/>
