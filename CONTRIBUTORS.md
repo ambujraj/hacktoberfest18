@@ -1816,3 +1816,9 @@ Place: India
 About: Student
 Programming Language: C, C++, Java, Python
 Email: saloni.gupta63@gmail.com
+
+Name: [Taewan Park](https://github.com/Taewan-P)
+Place: South Korea
+About: Student
+Programming Language: C, Java, Python 2/3, Javascript
+Email: swimingtw@gmail.com
