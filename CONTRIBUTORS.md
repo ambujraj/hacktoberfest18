@@ -2096,3 +2096,10 @@ About: Computer science student<br/>
 Programming languages: c , cpp, python , ruby , js <br/>
 Email: rupnamaitra100@gmail.com
 
+Name: [Hunter Wallace](https://github.com/Hjwallace)<br/>
+Place: Muncie,Indiana<br/>
+About: Computer Science Sophmore at Ball State University<br/>
+Programming Languages: JAVA,HTML/CSS,Python
+Email: hunterjwallace@gmail.com
+
+
