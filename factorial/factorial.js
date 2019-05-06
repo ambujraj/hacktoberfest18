@@ -1,16 +1,9 @@
-function factorial(num){
-    let facto = 1;
-    if(num==0){
-        facto = 1;
+function factorial(num) {
+  let facto = 1;
+  if (num > 1) {
+    for (let i = num; i > 0; i -= 1) {
+      facto *= i;
     }
-    else if(num==1){
-        facto = 1;
-    }
-    else{
-    for(let i=num;i>0;i--){
-        facto = facto*i;
-    }}
-    console.log("Factorial of " + num + " is: " + facto);
-    facto = 1;
+  }
+  return `Factorial of ${ num } is: ${ facto }`;
 }
-
