@@ -1,0 +1,23 @@
+public class Recursion{
+	public static char recursivePrint(int count){
+		if( count>26 ){
+			return ' ';
+		}
+                else if( count==0 ){
+			return ' ';
+		}
+                
+                char letter='z';
+		for(int i=0;i<count;i++){
+			System.out.print(letter+" ");
+			letter--;
+		}
+                System.out.println();
+		return recursivePrint( count-1 );
+	}
+}
+public class TestRecursion{
+	public static void main(String[] args){
+		Recursion.recursivePrint(5);
+	}
+}
