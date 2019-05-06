@@ -437,6 +437,11 @@ Place: New Delhi<br/>
 About: I am presently studying computer science at Thapar Institue of Engineering and Technology and love coding.<br/>
 Programming Language:C,C++,Python<br/>
 
+Name: [Elena](https://github.com/elenaramon)<br/>
+Place: Italy<br/>
+About: I am studying computer science.<br/>
+Programming Language:C,Java<br/>
+
 Name: [Keshav Kabra](https://github.com/ksvkabra/)<br/ >
 Place: Jaipur<br/ >
 About: I am presently studying computer engineering at JECRC.<br/ >
