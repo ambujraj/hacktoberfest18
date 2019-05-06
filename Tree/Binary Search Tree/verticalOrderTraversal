@@ -1,0 +1,74 @@
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) {
+ *      val = x;
+ *      left=null;
+ *      right=null;
+ *     }
+ * }
+ */
+public class Solution {
+    
+    static class Pair {
+        int hd;
+        TreeNode tn;
+        Pair(int hd, TreeNode tn) {
+            this.hd = hd;
+            this.tn = tn;
+        }
+    }
+    
+    public ArrayList<ArrayList<Integer>> verticalOrderTraversal(TreeNode A) {
+        
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+
+        if (A == null)
+            return res;
+        
+        Map<Integer,ArrayList<Integer>> tm = new TreeMap<>();
+        Queue<Pair> q = new LinkedList<Pair>();
+        
+        Pair p = new Pair(0,A);
+        q.add(p);
+        
+        Pair newpair;
+        ArrayList<Integer> al;
+        while (!q.isEmpty()) {
+            
+            Pair temp = q.poll();
+            int hd = temp.hd;
+            TreeNode tn = temp.tn;
+            
+            if (tm.get(hd) == null) {
+                al = new ArrayList<Integer>();
+                al.add(tn.val);
+            }
+            else {
+                al = tm.get(hd);
+                al.add(tn.val);
+            }
+            tm.put(hd,al);
+                
+            if (tn.left != null) {
+                newpair = new Pair(hd-1,tn.left);
+                q.add(newpair);
+            }
+                
+            if (tn.right != null) {
+                newpair = new Pair(hd+1,tn.right);
+                q.add(newpair);
+            }
+            
+        }
+        
+        for (Map.Entry e : tm.entrySet()) {
+            res.add((ArrayList<Integer>)e.getValue());
+        }
+        return res;
+    }
+}
+
