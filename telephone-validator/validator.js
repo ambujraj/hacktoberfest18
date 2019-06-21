@@ -1,6 +1,6 @@
 export default function validatePhoneNumber(phone_number){
-    if(phone_number != null || phone_number.toString().length()==10 ){
-        return true;
+    if(phone_number != null){
+        return phone_number.match(/^\d{10}$/);
     }
     return false;
 }
