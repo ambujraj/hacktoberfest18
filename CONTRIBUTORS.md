@@ -751,6 +751,11 @@ Place: Mandi, Himachal Pradesh
 About: I am 2nd year CSE student.
 Programming Language: C++, C, Python
 
+Name: [LENZFLIKER](https://github.com/LENZFLIKER)
+Place: Kandy, Sri Lanka
+About: Student
+Programming Language: Python, SQL
+
 Name: [Amusat Akeem](https://github.com/dev-haykay)
 Place: Nigeria
 About: Computer science graduate
