@@ -1,44 +1,40 @@
-#include<bits/stdc++.h>
+// CPP program to implement 
+// Binary Search in 
+// Standard Template Library (STL) 
+#include <algorithm> 
+#include <iostream> 
 
-using namespace std;
+using namespace std; 
 
-int main()
-{
-	int n, i, arr[50], el, low, high, mid;
-	cout << "Enter size of list:";
-	cin >> n;
-	cout << "Enter elements :";
-	for (i=0; i<n; i++)
-	{
-		cin >> arr[i];
-	}
-	cout << "Enter element to be searched:";
-	cin >> el;
-	low = 0;
-	high = n-1;
-	mid = (low+high)/2;
-	while (low <= high)
-	{
-		if(arr[mid] < el)
-		{
-			low = mid + 1;
+void show(int a[], int arraysize) 
+{ 
+	for (int i = 0; i < arraysize; ++i) 
+		cout << a[i] << " "; 
+} 
 
-		}
-		else if(arr[mid] == el)
-		{
-			cout << el <<" found at location " << mid <<"\n";
-			break;
-		}
-		else
-		{
-			 high = mid - 1;
-		}
-		mid = (low + high)/2;
-	}
-	if(low > high)
-	{
-		cout << "Not found! " << el << " is not present in the list.";
-	}
+int main() 
+{ 
+	int a[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 }; 
+	int asize = sizeof(a) / sizeof(a[0]); 
+	cout << "\n The array is : "; 
+	show(a, asize); 
 
-	return 0;
-}
+	cout << "\n\nLet's say we want to search for 2 in the array"; 
+	cout << "\n So, we first sort the array"; 
+	sort(a, a + asize); 
+	cout << "\n\n The array after sorting is : "; 
+	show(a, asize); 
+	cout << "\n\nNow, we do the binary search"; 
+	if (binary_search(a, a + 10, 2)) 
+		cout << "\nElement found in the array"; 
+	else
+		cout << "\nElement not found in the array"; 
+
+	cout << "\n\nNow, say we want to search for 10"; 
+	if (binary_search(a, a + 10, 10)) 
+		cout << "\nElement found in the array"; 
+	else
+		cout << "\nElement not found in the array"; 
+
+	return 0; 
+} 
