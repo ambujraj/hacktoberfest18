@@ -22,5 +22,6 @@ int main(){
 	
 	
 	cout<< std::endl;
+	cout<<'This is a queue';
     return 0;
 }
