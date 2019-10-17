@@ -1,4 +1,10 @@
-﻿Name: [Anushree](https://github.com/anushree816)<br/>
+﻿Name: [Rohit](https://github.com/007kartik-bot-1)<br/>
+Place: India<br/>
+About: Computer science undegrad<br/>
+Programming languages: JavaScript, Html, Css, python , C++, C and many more<br/>
+Email: rohitkartik2000@rediffmail.com
+
+Name: [Anushree](https://github.com/anushree816)<br/>
 Place: India<br/>
 About: Engineering student<br/>
 Programming languages: C,C++, Python <br/>
