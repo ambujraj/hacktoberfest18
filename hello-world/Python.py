@@ -1,6 +1,6 @@
 import numpy as np
 
-def polyhello(x):
+def hello(x):
     """
     Polynomial interpolation of the letters of "Hello world".
     We try to get to all the points defined by : [ord(c) for c in "Hello world"].
@@ -22,4 +22,4 @@ def polyhello(x):
     return int(np.round(retour))
 
 for i in range(11):
-    print(chr(polyhello(i)), end="")
+    print(chr(hello(i)), end="")
