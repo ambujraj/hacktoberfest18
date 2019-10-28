@@ -1,0 +1,101 @@
+
+from random import choice,shuffle
+ 
+def feedback(posMatch,colMatch):
+    feedback1 = str(posMatch) + " POSITIONS"
+    feedback2 = str(colMatch) + " COLOURS"
+    
+    if posMatch == 1:
+        feedback1 = feedback1[:-1]
+ 
+    if colMatch == 1:
+        feedback2 = feedback2[:-1]
+
+    # This is to take out the "S" if the number of colours or positions is singular
+
+    feedback = feedback1 + " — " + feedback2 + "\n"
+    return print(feedback)
+ 
+print("Guess The Code Game")
+print("			\n")
+
+print("Colours : Violet,Indigo,Blue,Green,Yellow,Orange,Red,White\n")
+print("			")
+print("INSTRUCTIONS:")
+print("System will choose a random 4 colour code from the above list. The aim is to guess it.")
+print("Note: Duplicates are not allowed.")
+print("Input format: RGYB")
+print("It shows the number of Position and Colour matches.")
+print("A Position match means right colour and right position.")
+print("A Colour match means right colour but wrong position.")
+print("10 guesses are allowed.")
+ 
+colours = ["V","I","B","G","Y","O","R","W"]
+ 
+play = "Y"
+while play == "Y":
+# This sets up the program so that later on the player has the option to play again
+ 
+    print()
+ 
+    code = []
+    
+    shuffle(colours)
+    code=colours[:4]
+        # code.append(choice(colours))
+        # This randomly selects the code from the colours array
+     
+     #This is just for me to check the program
+ 
+    win = False
+    n=10
+    for g in range(n): # You only get 10 guesses
+        validated = False
+        while validated == False:
+            validated = True
+            # You assume the user input is valid until you find out otherwise                    
+            print("Number of guesses left : "+str(n-g))
+            guess = input("INPUT guess: ").upper()
+            if len(guess) != len(code):
+                print("You have to type in 4 colours.\n")
+                validated = False
+            elif len(set(guess))!=len(guess):
+                print("Duplicates not allowed.\n")
+                validated = False
+            else:
+                for i in range(4):
+                    if guess[i] not in colours:
+                        print("Unexpected character. Please try again.\n")
+                        validated = False
+                        break
+      
+        guess = list(guess)
+         
+        posMatch = 0
+        colMatch = 0
+        for i in range(4):
+            if guess[i] == code[i]:
+                posMatch += 1
+                         
+        for i in range(4):
+            if guess[i] in code and guess[i] != code[i]:
+                colMatch += 1
+            
+         
+        if posMatch == 4:
+            win = True
+            break
+        else:
+            if g < 9:
+                feedback(posMatch,colMatch)
+ 
+    if win == True:
+        print("You win! The code is " + "".join(code) + ".")
+ 
+    else:
+        print("Sorry — the code was " + "".join(code) + ". You lose.")
+ 
+    print()
+    play = input("Play again? (Y/N) ").upper()
+    while play != "Y" and play != "N":
+        print("Please respond with the letter 'Y' or 'N' only.")
