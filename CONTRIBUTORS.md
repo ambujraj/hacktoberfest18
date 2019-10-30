@@ -2125,3 +2125,9 @@ Place: India<br/>
 About: Computer science student<br/>
 Programming languages: c , cpp, python , ruby , js <br/>
 Email: rupnamaitra100@gmail.com
+
+Name: Edward Matyja (https://github.com/edwardallanpoe
+Place: Ohio
+About: Board game developer, novice programmer
+Programming languages: GML, JS, HTML
+Email: ekmatyja98@gmail.com
