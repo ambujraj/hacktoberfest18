@@ -1,100 +1,225 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
-class Node {
-private:
+class Node{
+public:
     int data;
-    Node *next;
-public:
-    Node() {};
-    int getData();
-    void setData(int data);
-    Node* getNext();
-    void setNext(Node *next);
+    Node* next;
 };
-
-int Node::getData() {
-    return this->data;
+Node* findMid(Node* head){
+    if(head==NULL){
+        return head;
+    }
+Node* slow = head, *fast = head->next;
+while(fast->next!=NULL&&fast->next->next!=NULL){
+    slow = slow->next;
+    fast = fast->next->next;
+}
+return slow;
+}
+Node* insert_at_beginning(Node* head, int data){
+    Node* temp = new Node();
+    temp->data = data;
+    temp->next = head;
+    head = temp;
+    return temp;
 }
 
-void Node::setData(int data) {
-    this->data = data;
+Node* insert_in_middle(Node* head, int data){
+    Node* temp = new Node();
+    temp->data = data;
+    Node* mid = findMid(head);
+    Node* temp2 = mid->next;
+    mid->next = temp;
+    temp->next = temp2;
+    return head;
 }
 
-Node* Node::getNext() {
-    return this->next;
+Node* insert_at_end(Node* head, int data){
+    Node* temp2 = new Node();
+    temp2->data = data;
+    Node* temp = head;
+    if(temp==NULL){
+        temp2->next = NULL;
+        return temp2;
+    }
+    while(temp->next!=NULL){
+        temp = temp->next;
+    }
+    temp->next = temp2;
+    temp2->next = NULL;
+    return head;
 }
 
-void Node::setNext(Node *next) {
-    this->next = next;
+Node* delete_at_beginning(Node* head){
+    if(head == NULL){
+        return NULL;
+    }
+    Node* temp = head->next;
+    delete head;
+    head = temp;
+    return head;
 }
 
-
-class LinkedList {
-private:
-    Node *head;
-    int len;
-public:
-    LinkedList();
-    void addNodeToFront(int data);
-    void addNodeToBack(int data);
-    void print();
-    int getLen();
-};
-
-LinkedList::LinkedList() {
-    head = nullptr;
-    len = 0;
+Node* delete_in_middle(Node* head){
+    Node* mid = findMid(head);
+    Node* temp = head;
+    while(temp->next!=mid){
+        temp = temp->next;
+    }
+    Node* temp2 = temp->next;
+    temp->next = temp2->next;
+    delete temp2;
+    return head;
 }
 
-void LinkedList::addNodeToFront(int data) {
-    Node *newNode = new Node();
-    newNode->setData(data);
-    newNode->setNext(head);
-    head = newNode;
-    this->len++;
+Node* delete_at_end(Node* head){
+    Node* temp = head;
+    if(temp==NULL){
+        return temp;
+    }
+    if(temp->next == NULL){
+        delete temp;
+        return NULL;
+    }
+    while(temp->next->next!=NULL){
+        temp = temp->next;
+    }
+    Node* temp2 = temp->next;
+    temp->next = NULL;
+    delete temp2;
+    return head;
 }
 
-void LinkedList::addNodeToBack(int data) {
-    Node *newNode = new Node();
-    newNode->setData(data);
-    newNode->setNext(nullptr);
-    Node *temp = head;
-    if(temp) {
-        while(temp->getNext()) {
-            temp = temp->getNext();
+void print(Node* head){
+Node* temp = head;
+while(temp!=NULL){
+    cout<<temp->data<<" ";
+    temp = temp->next;
+}
+}
+
+int number_of_nodes(Node* head){
+   Node* temp = head;
+   int count = 0;
+   while(temp!=NULL){
+    temp = temp->next;
+    count++;
+   }
+   return count;
+}
+bool search_node(Node* head, int data){
+Node* temp = head;
+while(temp!=NULL){
+    if(temp->data == data){
+        return true;
+    }
+    temp = temp->next;
+}
+return false;
+}
+Node *reverse_list(Node* head){
+Node* curr = head;
+Node* prev = NULL;
+while(curr!=NULL){
+    Node* next = curr->next;
+    curr->next = prev;
+    prev = curr;
+    curr = next;
+}
+head = prev;
+return head;
+}
+int main()
+{
+    cout<<"ENTER THE ELEMENTS OF THE LINKED LIST AND TERMINATE THE LIST BY -1"<<endl;
+    int n;
+    cin>>n;
+    Node* head = NULL;
+    Node* tail = NULL;
+    while(n!=-1){
+            Node* temp = new Node();
+            temp->data = n;
+            temp->next = NULL;
+        if(head==NULL){
+            head = temp;
+            tail = temp;
         }
-        temp->setNext(newNode);
+        else{
+            tail->next = temp;
+            tail = tail->next;
+        }
+        cin>>n;
     }
-    else {
-        addNodeToFront(data);
+    int ch;
+    cout<<"CHOOSE YOUR CHOICE AND -1 TO TERMINATE"<<endl;
+    cout<<"1)	Insertion of a node at begining, at middle and at end of list."<<endl;
+    cout<<"2)	Deletion of a node at begining, at middle and at end of list."<<endl;
+    cout<<"3)	Display the link list."<<endl;
+    cout<<"4)	Count the number of nodes in the link list."<<endl;
+    cout<<"5)	Search a node in the link list."<<endl;
+    cout<<"6)	Reverse the link list."<<endl;
+    cin>>ch;
+    while(ch!=-1){
+        if(ch==1){
+                cout<<"ENTER DATA"<<endl;
+                int x;
+                cin>>x;
+                char a;
+            cout<<"DO YOU WANT TO "<<endl;
+            cout<<"a) INSERT AT THE BEGINNING"<<endl;
+            cout<<"b) INSERT IN THE MIDDLE"<<endl;
+            cout<<"c) INSERT AT THE END"<<endl;
+        cin>>a;
+        if(a=='a'){
+            head = insert_at_beginning(head, x);
+        }
+        if(a=='b'){
+            head = insert_in_middle(head, x);
+        }
+        if(a=='c'){
+            head = insert_at_end(head, x);
+        }
+        }
+        if(ch==2){
+                char a;
+            cout<<"DO YOU WANT TO "<<endl;
+            cout<<"a) DELETE AT THE BEGINNING"<<endl;
+            cout<<"b) DELETE IN THE MIDDLE"<<endl;
+            cout<<"c) DELETE AT THE END"<<endl;
+            cin>>a;
+        if(a=='a'){
+            head = delete_at_beginning(head);
+        }
+        if(a=='b'){
+            head = delete_in_middle(head);
+        }
+        if(a=='c'){
+            head = delete_at_end(head);
+        }
+        }
+        if(ch==3){
+                cout<<"The current linked list is:  ";
+             print(head);
+        }
+        if(ch==4){
+            int p = number_of_nodes(head);
+            cout<<p<<endl;
+        }
+        if(ch==5){
+            cout<<"Enter the node you want to search"<<endl;
+            int q;
+            cin>>q;
+            if(search_node(head, q)){
+                cout<<"The node exists"<<endl;
+            }
+            else{
+                cout<<"The node does not exist"<<endl;
+            }
+        }
+        if(ch==6){
+            head = reverse_list(head);
+        }
+        cout<<"Enter choice"<<endl;
+        cin>>ch;
     }
-    this->len++;
-}
-
-int LinkedList::getLen() {
-    return this->len;
-}
-
-void LinkedList::print() {
-    std::cout << "Length: " << this->getLen() << "\n";
-    Node *temp = head;
-    while(temp) {
-        std::cout << temp->getData() << " ";
-        temp = temp->getNext();
-    }
-    std::cout << std::endl;
-}
-
-
-int main() {
-    LinkedList *ll = new LinkedList();
-    ll->addNodeToFront(10);
-    ll->addNodeToFront(20);
-    ll->addNodeToFront(30);
-    ll->addNodeToBack(40);
-    ll->addNodeToBack(50);
-    ll->print();
-    return 0;
 }
