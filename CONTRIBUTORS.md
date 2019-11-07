@@ -4,6 +4,12 @@ About: Engineering student<br/>
 Programming languages: C,C++, Python <br/>
 Email: anushree816@gmail.com
 
+Name: [ofir Isakov](https://github.com/OfirIsakov)<br/>
+Place: Israel</br>
+About: High school student</br>
+Programming Language: Python, C, C#, java </br>
+Email: isakov.ofir@gmail.com
+
 Name: [Heng Mouyleng](https://github.com/mouyleng2508)<br/>
 Place: Cambodia</br>
 About: Software Engineering student</br>
