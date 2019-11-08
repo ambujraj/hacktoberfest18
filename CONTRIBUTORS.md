@@ -2119,6 +2119,12 @@ Place: Canada
 About: Student
 Programming Language: Python, Php
 
+Name: Lauren Pappas (http://github.com/LNPappas)
+Place: USA
+About: Student
+Programming Language: Python
+Email: LPappas@gmail.com
+
 
 Name: [Prasun](https://github.com/rupna100)<br/>
 Place: India<br/>
