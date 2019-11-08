@@ -3,7 +3,7 @@
 int main(){
 	int st1[8]={2,4,7,4,8,5,5,2},st2[8]={3,2,7,5,2,4,1,1},st3[8]={2,4,4,1,5,1,2,4},st4[8]={3,2,5,4,3,2,1,3};
 	int i,st1f,st2f,st3f,st4f;
-/*	printf("Enter st1: ");
+/*	printf("Enter  st1: ");
 	for(i=0;i<8;i++)
 		scanf("%d",&st3[i]);
 */
