@@ -5,4 +5,4 @@ import sys
 sys.stdout.write('Hello HactoberFest')
 sys.stdout.flush()
 
-print("Hello World")
+print("Hello" + " World")
