@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+
+void insertion(int x[],int size)
+{
+	int value,i,j;
+	for (i=0;i<size;i++)
+	{
+		value=x[i];
+		for (j=i;j>0;j--)
+		{
+			if(x[j-1]>value)
+			{	
+				x[j]=x[j-1];
+			}
+			else
+			{
+			break;
+			}
+		}
+		x[j]=value;
+	}
+}
+void main()
+{
+int x[]={110,11,21,32,60,50,55};
+int size =7;
+insertion(x,size);
+for (int j=0;j<size;j++)
+		{
+				printf("%d\t",x[j]);
+			}
+}
