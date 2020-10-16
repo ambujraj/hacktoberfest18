@@ -1,9 +1,0 @@
-print("Hi, I am the Optimus Calculator.")
-print("I can calculate the perimeter of any rectangle")
-w = int(input("Give me its width:"))
-l = int(input("And now its length:"))
-t = w + h
-p = 2*t
-print ("The perimeter is {} units." .format(p))
-e = int(input("Enter any number to exit:"))
-
