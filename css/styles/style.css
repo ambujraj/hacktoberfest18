@@ -1,0 +1,15 @@
+/*
+
+    We can change border --> left,right,top and bottom property according to our requirement of arrow direction
+    foreg below I have written css code for arrow pointing towards right
+*/    
+
+.arrow{
+    width: 0;
+    height: 0;
+    /* background-color: red; */
+    border-left: 40px solid red;
+    /* border-right: 40px solid cyan; */
+    border-top: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
