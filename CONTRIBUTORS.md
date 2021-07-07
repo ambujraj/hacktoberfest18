@@ -360,6 +360,12 @@ About: Music, Coding, Fun!<br/>
 Programming Language: Html, CSS, JS, C++, C#, Python<br/>
 Email: cadeknight715@gmail.com<br/>
 
+Name: [Kush Daga](https://github.com/kush-daga)<br/>
+Place: Patiala,India<br/>
+About: Newbie Programmer<br/>
+Programming Language: Html, CSS, C++, Python<br/>
+Email: kushdaga@hotmail.com<br/>
+
 Name: [Ryssmo](https://github.com/Ryssmo)<br/>
 Place: Norway<br/>
 About: Coding is life<br/>
