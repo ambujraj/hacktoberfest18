@@ -1,42 +1,43 @@
-import java.util.*;
+class Roman{
+	public static String getRomanNumeral(int arabicNumber){
 
-public class Roman{
+		if(arabicNumber>0&&arabicNumber< 4000){
 
-	public static int romanToInt(String s) {
-        	Map<Character, Integer> map = new HashMap<>();
-        	map.put('I', 1);
-        	map.put('V', 5);
-        	map.put('X', 10);
-        	map.put('L', 50);
-        	map.put('C', 100);
-        	map.put('D', 500);
-        	map.put('M', 1000);
-        	char[] characters = s.toCharArray();
-        	int sum = 0;
-        	int lastVal = 0;
-        	for (Character c : characters) {
-			if(!map.containsKey(c)){
-				System.out.println("Not valid Roman Numeral");
-				System.exit(0);
+			final LinkedHashMap<Integer, String> numberLimits=
+					new LinkedHashMap<>();
+
+			numberLimits.put(1,"I");
+			numberLimits.put(4,"IV");
+			numberLimits.put(5,"V");
+			numberLimits.put(9,"IX");
+			numberLimits.put(10,"X");
+			numberLimits.put(40,"XL");
+			numberLimits.put(50,"L");
+			numberLimits.put(90,"XC");
+			numberLimits.put(100,"C");
+			numberLimits.put(400,"CD");
+			numberLimits.put(500,"D");
+			numberLimits.put(900,"CM");
+			numberLimits.put(1000,"M");
+
+			String romanNumeral="";
+
+			while(arabicNumber>0){
+				int highestFound=0;
+				for(Map.Entry<Integer, String> current:numberLimits.entrySet()){
+					if(current.getKey()<=arabicNumber){
+						highestFound=current.getKey();
+					}
+				}
+				romanNumeral+=numberLimits.get(highestFound);
+				arabicNumber-=highestFound;
 			}
-            		int val = map.get(c);
-            		if (val > lastVal){
-                		sum = sum - 2 * lastVal + val;
-            		}else{
-                		sum += val;
-            		}
-            		lastVal = val;
-        	}
-        	return sum;
-        
-    	}
 
-	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Please type in a roman numeral number: ");
-		String number = sc.nextLine();
-		int result = romanToInt(number);
-		System.out.println("The number is " + result);
+			return romanNumeral;
+
+		}else{
+			throw new UnsupportedOperationException(arabicNumber
+					+" is not a valid Roman numeral.");
+		}
 	}
-
 }

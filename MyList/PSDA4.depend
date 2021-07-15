@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1540118942 source:/home/catzy/Ngoprek/03-STRUKDAT/Tugas/PSDA4/PSDA4/main.c
+	"header.h"
+
+1540132527 /home/catzy/Ngoprek/03-STRUKDAT/Tugas/PSDA4/PSDA4/header.h
+	<stdio.h>
+	<stdlib.h>
+

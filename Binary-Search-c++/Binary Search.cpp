@@ -10,12 +10,12 @@ int binarySearch(int *input,int beg,int end,int number){
         return mid;
     }
     //Search left sub array
-    if(number<input[mid]){
-        return binarySearch(input,beg,mid-1,number);
+    if(number>input[mid]){
+        return binarySearch(input,mid+1,end,number);
     }
     //Search right sub array
     else{
-        return binarySearch(input,mid+1,end,number);
+        return binarySearch(input,beg,mid-1,number);
     }
     
     return -1;

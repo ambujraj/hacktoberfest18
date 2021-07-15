@@ -1,12 +1,17 @@
 //0-1 Knapsack problem using dynamic programming 
-#include<iostream.h> 
-  
-int max(int a, int b) { return (a > b)? a : b; } 
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define siz 500000
+#define m 1000000007
+
+ll val[siz],wt[siz];
+ll max(ll a, ll b) { return (a > b)? a : b; } 
    
-int knapSack(int W, int wt[], int val[], int n) 
+ll knapSack(ll W, ll wt[], ll val[], ll n) 
 { 
-   int i, w; 
-   int K[n+1][W+1]; 
+   ll i, w; 
+   ll K[n+1][W+1]; 
   
    for (i = 0; i <= n; i++) 
    { 
@@ -24,12 +29,27 @@ int knapSack(int W, int wt[], int val[], int n)
    return K[n][W]; 
 } 
   
-void main() 
+int main() 
 { 
-    int val[] = {50, 110, 115}; 
-    int wt[] = {10, 20, 30}; 
-    int  W = 50; 
-    int n = 1; 
-    int c=knapSack(W, wt, val, n); 
-    cout<<c; 
+    ll n,i=0,W,n=1;
+    cout<<"Enter the limit"<<endl;
+    cin>>n;
+    cout<<"Enter values"<<endl;
+    while(i<n){
+      cin>>val[i];
+      i++;
+    }
+    cout<<"Enter weights"<<endl;
+    i=0;
+    while(i<n){
+      cin>>wt[i];
+      i++;
+    }
+    cout<<"Enter weight"<<endl;
+    cin>>W;
+    //int  W = 50; 
+    //int n = 1; 
+    ll c=knapSack(W, wt, val, n); 
+    cout<<c;
+    return 0;
 } 

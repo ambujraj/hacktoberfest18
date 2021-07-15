@@ -1,4 +1,6 @@
 factorial :: Int -> Int
 factorial n = product [1..n]
 
-main = print (factorial 5)
+main = do
+        x <- readLn
+        print (factorial x)

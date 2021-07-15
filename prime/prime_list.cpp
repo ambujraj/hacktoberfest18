@@ -6,7 +6,7 @@
 void check_prime(int m)
 { int i,c;
   c=0;
-  for(i=2; i<m;i++)
+  for(i=2; i*i<=m;i++)
   { if(m%i ==0)
     {c=1;
     break;

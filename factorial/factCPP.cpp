@@ -1,13 +1,16 @@
 #include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 
-int f(int a){
+ll f(llt a){
   return a < 2 ? 1 : a * f(a-1);
 }
 
 int main(){
-  int a;
+  ll a;
   cin>>a;
   cout<<f(a)<<endl;
-  exit(EXIT_SUCCESS);
+  return 0;
+  //exit(EXIT_SUCCESS);
 }

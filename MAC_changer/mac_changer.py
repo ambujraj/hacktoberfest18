@@ -4,7 +4,7 @@ import subprocess
 import optparse
 import re
 
-
+# get all arguments from CLI when code is executed
 def get_arguments():
     parser = optparse.OptionParser()
     parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC Address")
